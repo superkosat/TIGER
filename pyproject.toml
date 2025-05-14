@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "tiger"
+version = "0.1.0"
+description = ""
+authors = ["Yan <100032599+whykay-01@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gin-config = "^0.5.0"
+accelerate = "^1.6.0"
+einops = "^0.8.1"
+numpy = "^2.2.5"
+pandas = "^2.2.3"
+polars = "^1.29.0"
+sentence-transformers = "^4.1.0"
+tlparse = "^0.3.41"
+torch = "2.5.1"
+tqdm = "^4.67.1"
+wandb = "^0.19.11"
+torchvision = "0.20.1"
+torch-geometric = "2.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
