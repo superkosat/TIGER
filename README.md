@@ -36,6 +36,11 @@ To train both models on the **MovieLens 32M** dataset, run the following command
 * **RQ-VAE tokenizer model training:** Trains the RQ-VAE tokenizer on the item corpus. Executed via `python train_rqvae.py configs/rqvae_ml32m.gin`
 * **Retrieval model training:** Trains retrieval model using a frozen RQ-VAE: `python train_decoder.py configs/decoder_ml32m.gin`
 
+
+
+To train model on **custom spotify** dataset:
+
+
 ### Next steps
 * Comparison encoder-decoder model vs. decoder-only model.
 

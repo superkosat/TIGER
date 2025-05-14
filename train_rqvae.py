@@ -27,7 +27,7 @@ def train(
     batch_size=64,
     learning_rate=0.0001,
     weight_decay=0.01,
-    dataset_folder="dataset/ml-1m",
+    dataset_folder="./data/spotify",
     dataset=RecDataset.ML_1M,
     pretrained_rqvae_path=None,
     save_dir_root="out/",

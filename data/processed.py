@@ -7,6 +7,7 @@ from data.amazon import AmazonReviews
 from data.ml1m import RawMovieLens1M
 from data.ml32m import RawMovieLens32M
 from data.schemas import SeqBatch
+from data.spotify_custom import SpotifyCustom  # 1. Import your dataset
 from enum import Enum
 from torch import Tensor
 from torch.utils.data import Dataset
@@ -20,19 +21,22 @@ class RecDataset(Enum):
     AMAZON = 1
     ML_1M = 2
     ML_32M = 3
+    SPOTIFY = 4
 
 
 DATASET_NAME_TO_RAW_DATASET = {
     RecDataset.AMAZON: AmazonReviews,
     RecDataset.ML_1M: RawMovieLens1M,
-    RecDataset.ML_32M: RawMovieLens32M
+    RecDataset.ML_32M: RawMovieLens32M,
+    RecDataset.SPOTIFY: SpotifyCustom,  # 2. Add to mapping
 }
 
 
 DATASET_NAME_TO_MAX_SEQ_LEN = {
     RecDataset.AMAZON: 20,
     RecDataset.ML_1M: 200,
-    RecDataset.ML_32M: 200
+    RecDataset.ML_32M: 200,
+    RecDataset.SPOTIFY: 100,  # 3. Set a reasonable default for Spotify
 }
 
 
